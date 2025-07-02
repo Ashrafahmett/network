@@ -1,0 +1,77 @@
+Networking Basics: IP, TCP, UDP, Encapsulation & Port Numbers
+This is a breakdown of essential networking concepts using simple analogies, key facts, and real-world examples. Perfect for anyone studying for CompTIA A+ or just getting started in IT.
+
+🚚 Data Transfer Metaphor
+Network = Road
+
+IP = Truck carrying your data
+
+Data = Box inside the truck
+
+Application = Room in a house
+
+Port Number = Room number on the label
+
+Just like a moving truck delivers a box to a specific room in a house, IP delivers data to the right app using port numbers.
+
+📦 Encapsulation (Layer by Layer)
+Each layer wraps the data like layers of a box:
+Ethernet Frame
+└── IP Packet
+    └── TCP/UDP Segment
+        └── Application Data
+| Feature      | TCP                                  | UDP                             |
+| ------------ | ------------------------------------ | ------------------------------- |
+| Type         | Connection-oriented                  | Connectionless                  |
+| Reliability  | Reliable (acknowledges, retransmits) | Unreliable (no acknowledgments) |
+| Speed        | Slower                               | Faster                          |
+| Use Case     | Web (HTTPS), SSH, Email              | VoIP, Streaming, DHCP, TFTP     |
+| Flow Control | Yes                                  | No                              |
+
+| Protocol | Port  | Protocol Type |
+| -------- | ----- | ------------- |
+| HTTP     | 80    | TCP           |
+| HTTPS    | 443   | TCP           |
+| FTP      | 20/21 | TCP           |
+| SSH      | 22    | TCP           |
+| DNS      | 53    | TCP/UDP       |
+| DHCP     | 67/68 | UDP           |
+| TFTP     | 69    | UDP           |
+| IMAP     | 143   | TCP           |
+| VoIP     | 5060  | UDP           |
+
+Well-known Ports: 0–1023 (used by servers)
+
+Ephemeral Ports: 1024–65535 (temporary, used by clients)
+)
+
+🔀 Multiplexing
+Multiple apps on one device can communicate over the same network.
+
+TCP/UDP + Port Numbers = we know exactly where data is going.
+
+Client: 10.0.0.1
+Server: 10.0.0.2
+
+Connections:
+- TCP 3000 -> 80 (HTTP)
+- UDP 7100 -> 5004 (VoIP)
+- TCP 4407 -> 143 (Email)
+💬 Notes
+TCP ensures delivery, UDP doesn’t care — speed > reliability.
+
+Port numbers are not security — they're just directions.
+
+HTTPS and SSH use TCP because accuracy is critical.
+
+VoIP uses UDP because it's real-time — no time to resend!
+
+📘 More to Explore
+OSI Model (especially Layer 3 and 4)
+
+TCP Handshake (SYN, SYN-ACK, ACK)
+
+IP vs MAC Address
+
+Wireshark packet capture
+
