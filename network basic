@@ -71,6 +71,19 @@ OSI Model (especially Layer 3 and 4)
 
 TCP Handshake (SYN, SYN-ACK, ACK)
 
+
+
+| Protocol   | Port   | TCP/UDP | Purpose               |
+| ---------- | ------ | ------- | --------------------- |
+| FTP        | 20/21  | TCP     | File transfers        |
+| SSH        | 22     | TCP     | Secure remote login   |
+| DNS        | 53     | UDP     | Resolves domain names |
+| SMTP       | 25     | TCP     | Send email            |
+| HTTP/HTTPS | 80/443 | TCP     | Web traffic           |
+| DHCP       | 67/68  | UDP     | Auto-assign IPs       |
+| RDP        | 3389   | TCP     | Remote desktop        |
+
+
 IP vs MAC Address
 
 Wireshark packet capture
